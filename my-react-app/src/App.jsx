@@ -1,24 +1,32 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
 import './App.css'
 import CommentsUI from './Components/Comments/CommentsUI'
 import { commentsData } from './Components/Comments/CommentsData'
 import useAddReply from './Components/Comments/CommentsUtils'
+import { initialFilesData } from './Components/FileExplorer/FilesData'
+import FileExplorer from './Components/FileExplorer/FileExplorer'
+import useFiles from './Components/FileExplorer/FilesUtils'
 
 function App() {
   
 const [data, setData] = useState(commentsData);
+const [filesData , setFilesData] = useState(initialFilesData);
 
   const handleReply = (parentId, text) => {
     const updated = useAddReply(data, parentId, text);
     setData(updated);
   };
 
+  const addFiles = (parentId, text , isFolder) => {
+    const updated = useFiles(filesData, parentId, text , isFolder);
+    setFilesData(updated);
+  };
+
   return (
     <div>
-      <CommentsUI commentsData={data} onReply={handleReply} />
+      {/* <CommentsUI commentsData={data} onReply={handleReply} /> */}
+
+      <FileExplorer filesData = {filesData} addFiles = {addFiles}/>
     </div>
   );
 }

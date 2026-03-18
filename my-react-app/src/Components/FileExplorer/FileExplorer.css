@@ -1,0 +1,18 @@
+.imgFolder{
+    width: 20px;
+    height: 20px;
+}
+.imgTitle {
+    display: flex;
+    align-items: center;
+}
+.filewrapper{
+    margin-left: 30px;
+}
+/* .fileName{
+    margin-top: 15px;
+} */
+.wrapper{
+    display: flex;
+    gap: 20px;
+}
