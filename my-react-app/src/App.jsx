@@ -6,6 +6,7 @@ import useAddReply from './Components/Comments/CommentsUtils'
 import { initialFilesData } from './Components/FileExplorer/FilesData'
 import FileExplorer from './Components/FileExplorer/FileExplorer'
 import useFiles from './Components/FileExplorer/FilesUtils'
+import MultiDropDown from './Components/MultiDropdown/multiDropdown'
 
 function App() {
   
@@ -26,7 +27,9 @@ const [filesData , setFilesData] = useState(initialFilesData);
     <div>
       {/* <CommentsUI commentsData={data} onReply={handleReply} /> */}
 
-      <FileExplorer filesData = {filesData} addFiles = {addFiles}/>
+      {/* <FileExplorer filesData = {filesData} addFiles = {addFiles}/> */}
+
+      <MultiDropDown/>
     </div>
   );
 }
