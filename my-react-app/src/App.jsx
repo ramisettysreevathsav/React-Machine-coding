@@ -7,6 +7,7 @@ import { initialFilesData } from './Components/FileExplorer/FilesData'
 import FileExplorer from './Components/FileExplorer/FileExplorer'
 import useFiles from './Components/FileExplorer/FilesUtils'
 import MultiDropDown from './Components/MultiDropdown/multiDropdown'
+import SearchBar from './Components/SearchBar/SearchBar'
 
 function App() {
   
@@ -29,7 +30,9 @@ const [filesData , setFilesData] = useState(initialFilesData);
 
       {/* <FileExplorer filesData = {filesData} addFiles = {addFiles}/> */}
 
-      <MultiDropDown/>
+      {/* <MultiDropDown/> */}
+
+      <SearchBar/>
     </div>
   );
 }
