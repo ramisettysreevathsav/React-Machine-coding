@@ -21,6 +21,7 @@
     align-items: center;
     justify-content: center;
     padding: 10px;
+    width: 100%;
 }
 .option-label{
     background-color: whitesmoke;
@@ -34,6 +35,7 @@
     border: 0.5px solid black;
     overflow: hidden;
     margin-top: 2px;
+    padding: 10px;
 }
 .selectedBox{
     padding: 4px;
